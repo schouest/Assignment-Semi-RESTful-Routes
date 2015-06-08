@@ -9,6 +9,30 @@ class products extends CI_Controller {
 	}
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->view('Index');
+	}
+
+	public function new_product(){
+		$this->load->view('newproduct');
+	}
+
+	public function edit_product(){
+		$this->load->view('editproduct');
+	}
+
+	public function show_product(){
+		$this->load->view('showproduct');
+	}
+
+	public function create(){
+		
+	}
+
+	public function destory(){
+
+	}
+
+	public function update(){
+
 	}
 }
