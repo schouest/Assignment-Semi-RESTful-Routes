@@ -63,13 +63,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		border: 1px solid #D0D0D0;
 		box-shadow: 0 0 8px #D0D0D0;
 	}
+
+	table{
+	border: 1px black solid;
+	margin-top:20px;
+	}
+	tr{
+	outline: 1px black;
+	outline-style: ridge;
+	}
+	th, td {
+    padding: 15px;
+}
+	form a{
+	border-right:1px solid black;
+	padding-right:3px;
+	}
+	form button{
+	border:none;	
+	}
 	</style>
 </head>
 <body>
 
 <div id="container">
 	<h1>Welcome to CodeIgniter!</h1>
-
+	
 	<div id="body">
 		<!-- <a href="products/new_product">TEST</a> -->
 		<table>
@@ -80,7 +99,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<th>Actions</th>	
 			</tr>
 
-<!-- TODO:add foreach to populate table -->
+<?php foreach ($product as $entry) { //TODO: table form navigation
+	?><tr><td style="background-color:darkgrey"><?php
+			echo $entry['name'];
+			$id = $entry['id'];
+			?></td><td style="background-color:lightgrey"><?=
+ 			$entry['description'];
+			?></td><td style="background-color:lightgrey"><?=
+			$entry['price'];
+			?></td><td style="background-color:grey">
+			<form action='' method="post">
+			<a href="<?= "localhost/courses/destroy/$id" ?>">Show</a>
+			<a href="<?= "localhost/courses/destroy/$id" ?>">Edit</a>
+			<button>Remove</button>
+			</form>			
+</td></tr><?php }
+?>
 
 		</table>
 		<p><a href="addnew">Add Product</a></p>

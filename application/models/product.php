@@ -1,9 +1,10 @@
 <?php
 class product extends CI_Model {
-     /*function get_all_courses()
+     function get_all_product()
      {
-         return $this->db->query("SELECT * FROM courses ORDER BY date_added DESC")->result_array();
+         return $this->db->query("SELECT * FROM products ORDER BY date_added DESC")->result_array();
      }
+     /*
      function get_course_by_id($course_id)
      {   
          return $this->db->query("SELECT * FROM courses WHERE id = ?", array($course_id))->row_array();

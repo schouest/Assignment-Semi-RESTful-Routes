@@ -9,7 +9,9 @@ class products extends CI_Controller {
 	}
 	public function index()
 	{
-		$this->load->view('Index');
+		$this->load->model('product');
+		$product=$this->product->get_all_product();
+		$this->load->view('Index',array('product'=> $product));
 		//redirect("/");
 	}
 
@@ -26,7 +28,7 @@ class products extends CI_Controller {
 	}
 
 	public function create(){
-		
+
 	}
 
 	public function destory(){
