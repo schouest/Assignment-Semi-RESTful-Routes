@@ -56,4 +56,5 @@ $route['addnew'] = 'products/new_product';
 $route['products/destroy/:num'] = '';
 //$route['products/create'] = 'products';
 $route['products/update/:num'] = '';
-$route['products/show/:num'] = ''; 
+$route['products/show/:num'] = '';
+//$rotue['/products/edit/:num'] = 'products/edit_product/$1';

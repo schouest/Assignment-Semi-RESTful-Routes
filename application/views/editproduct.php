@@ -33,17 +33,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		padding: 14px 15px 10px 15px;
 	}
 
-	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
-		font-size: 12px;
-		background-color: #f9f9f9;
-		border: 1px solid #D0D0D0;
-		color: #002166;
-		display: block;
-		margin: 14px 0 14px 0;
-		padding: 12px 10px 12px 10px;
-	}
-
 	#body {
 		margin: 0 15px 0 15px;
 	}
@@ -75,9 +64,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h1>Edit Product X</h1>
 	<div id="body">
 		<form method="post" action="products/create">
-			<label>Name<br><input type="text" name='name'></label><br>
-			<label>Description<br><input type="text" name='descr'></label><br>
-			<label>Price<br><input type="text" name='price'></label><br>
+			<label>Name<br><input type="text" name='name' placeholder="<?= $product['name'] ?>"></label><br>
+			<label>Description<br><input type="text" name='descr' placeholder="<?= $product['description'] ?>"></label><br>
+			<label>Price<br><input type="number" name='price' placeholder="<?= $product['price'] ?>" step='any' min='0'></label><br>
 			<button type="submit" value="submit">Edit</button>
 		</form>
 	</div>

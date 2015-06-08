@@ -19,14 +19,15 @@ class products extends CI_Controller {
 		$this->load->view('newproduct');
 	}
 
-	public function edit_product(){
-		$this->load->view('editproduct');
+	public function edit_product($id){
+		$this->load->model('product');
+		$product=$this->product->get_product_by_id($id);
+		$this->load->view('editproduct',array('product'=>$product));
 	}
 
 	public function show_product($id){
 		$this->load->model('product');
 		$product=$this->product->get_product_by_id($id);
-		//$this->load->view('Index',array('product'=> $product));
 		$this->load->view('showproduct',array('product'=> $product));
 	}
 
