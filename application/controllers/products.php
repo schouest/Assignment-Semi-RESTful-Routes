@@ -37,11 +37,15 @@ class products extends CI_Controller {
 		redirect("/");
 	}
 
-	public function destory($id){
+	public function destroy($id){
+		$this->load->model('product');
+		$product=$this->product->delete_product($id);
 		redirect("/");
 	}
 
 	public function update(){
-
+		$this->load->model('product');
+		$product=$this->product->update_product($this->input->post());
+		redirect("/");
 	}
 }

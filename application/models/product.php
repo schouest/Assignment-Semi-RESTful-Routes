@@ -10,9 +10,8 @@ class product extends CI_Model {
          return $this->db->query("SELECT * FROM products WHERE id = ?", array($id))->row_array();
      }
 
- /*    function validate_course($id){
+ /*    function validate_product($id){
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('c_name', "Course Name", 'required|trim|alpha_numeric|min_length[15]');
 
         if($this->form_validation->run()===FALSE){
             return FALSE;
@@ -28,9 +27,16 @@ class product extends CI_Model {
          return $this->db->query($query, $values);
      }
 
-     /*function delete_course($id){
-        $query = "DELETE FROM courses WHERE id = $id";
+     function delete_product($id){
+        $query = "DELETE FROM products WHERE id = $id";
         return $this->db->query($query);  
-     }*/
+     }
+
+     function update_product($product_info){
+        $id = $product_info['idnumber'];
+        $query = "UPDATE products SET name=?, description=?, price=? WHERE id=$id";
+        $values = array($product_info['name'], $product_info['descr'], $product_info['price']); 
+        return $this->db->query($query, $values);
+     }
 }
 ?>

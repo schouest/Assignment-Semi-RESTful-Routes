@@ -97,7 +97,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			?></td><td style="background-color:lightgrey">$<?=
 			$entry['price'];
 			?></td><td style="background-color:grey">
-			<form action='' method="post">
+			<form action="<?= "products/destroy/$id" ?>"method="post">
 			<a href="<?= "products/show_product/$id" ?>">Show</a>
 			<a href="<?= "products/edit_product/$id" ?>">Edit</a>
 			<button>Remove</button>

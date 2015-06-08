@@ -61,16 +61,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 <body>
 	<div id="container">
-	<h1>Edit Product X</h1>
+	<h1>Edit Product <?= $product['id'] ?></h1>
 	<div id="body">
-		<form method="post" action="products/create">
-			<label>Name<br>&nbsp<input type="text" name='name' placeholder="<?= $product['name'] ?>"></label><br>
-			<label>Description<br>&nbsp<input type="text" name='descr' placeholder="<?= $product['description'] ?>"></label><br>
-			<label>Price<br>$<input type="number" name='price' placeholder="<?= $product['price'] ?>" step='any' min='0'></label><br>
-			<button type="submit" value="submit">Edit</button>
+		<form method="post" action="/products/update">
+			<input type="hidden" name="idnumber" value="<?= $product['id'] ?>">
+			<label>Name<br>&nbsp<input type="text" name='name' value="<?= $product['name'] ?>"></label><br>
+			<label>Description<br>&nbsp<input type="text" name='descr' value="<?= $product['description'] ?>"></label><br>
+			<label>Price<br>$<input type="number" name='price' value="<?= $product['price'] ?>" step='any' min='0'></label><br>
+			<button type="submit" value="submit">Update</button>
 		</form>
 	</div>
-	<a href ="#">Show</a><span><a href="/">Back</a></span>
+	<a href ="/products/show_product/<?= $product["id"] ?>">Show</a><span><a href="/">Back</a></span>
 </div>
 </body>
 </body>
