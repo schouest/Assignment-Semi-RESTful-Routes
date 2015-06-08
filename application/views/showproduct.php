@@ -60,7 +60,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div id="body">
 		<p>Name: <?= $product['name']?></p>
 		<p>Description: <?= $product['description']?></p>
-		<p>Price: <?= $product['price']?></p>
+		<p>Price: $<?= $product['price']?></p>
 	</div>
 	<a href ="/products/edit_product/<?= $product['id']?>">Edit</a><span><a href="/">Back</a></span>
 </div>

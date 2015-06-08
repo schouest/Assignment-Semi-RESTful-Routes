@@ -32,7 +32,9 @@ class products extends CI_Controller {
 	}
 
 	public function create(){
-
+		$this->load->model('product');
+		$product=$this->product->add_product($this->input->post());
+		redirect("/");
 	}
 
 	public function destory($id){

@@ -59,9 +59,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<div id="body">
 		<form method="post" action="products/create">
-			<label>Name<br><input type="text" name='name'></label><br>
-			<label>Description<br><input type="text" name='descr'></label><br>
-			<label>Price<br><input type="number" name='price' step='any' min='0'></label><br>
+			<label>Name<br>&nbsp<input type="text" name='name'></label><br>
+			<label>Description<br>&nbsp<input type="text" name='descr'></label><br>
+			<label>Price<br>$<input type="number" name='price' step='any' min='0'></label><br>
 			<button type="submit" value="submit">Create</button>
 		</form>
 		<a href="/">Go Back</a>

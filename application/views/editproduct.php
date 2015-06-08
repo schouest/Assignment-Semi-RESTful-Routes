@@ -64,9 +64,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<h1>Edit Product X</h1>
 	<div id="body">
 		<form method="post" action="products/create">
-			<label>Name<br><input type="text" name='name' placeholder="<?= $product['name'] ?>"></label><br>
-			<label>Description<br><input type="text" name='descr' placeholder="<?= $product['description'] ?>"></label><br>
-			<label>Price<br><input type="number" name='price' placeholder="<?= $product['price'] ?>" step='any' min='0'></label><br>
+			<label>Name<br>&nbsp<input type="text" name='name' placeholder="<?= $product['name'] ?>"></label><br>
+			<label>Description<br>&nbsp<input type="text" name='descr' placeholder="<?= $product['description'] ?>"></label><br>
+			<label>Price<br>$<input type="number" name='price' placeholder="<?= $product['price'] ?>" step='any' min='0'></label><br>
 			<button type="submit" value="submit">Edit</button>
 		</form>
 	</div>

@@ -94,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$id = $entry['id'];
 			?></td><td style="background-color:lightgrey"><?=
  			$entry['description'];
-			?></td><td style="background-color:lightgrey"><?=
+			?></td><td style="background-color:lightgrey">$<?=
 			$entry['price'];
 			?></td><td style="background-color:grey">
 			<form action='' method="post">
