@@ -38,15 +38,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		margin: 0 15px 0 15px;
 	}
 
-	p.footer {
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
-
 	#container {
 		margin: 10px;
 		border: 1px solid #D0D0D0;
@@ -65,11 +56,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     padding: 15px;
 }
 	form a{
-	border-right:1px solid black;
-	padding-right:3px;
+	border-right:2px double black;
+	padding-right:8px;
+	margin-left:3px;
 	}
 	form button{
 	border:none;	
+	margin-left:5px;
 	}
 	</style>
 </head>
@@ -87,7 +80,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<th>Price</th>
 				<th>Actions</th>	
 			</tr>
-
 <?php foreach ($product as $entry) { //TODO: table form navigation
 	?><tr><td style="background-color:darkgrey"><?php
 			echo $entry['name'];
@@ -109,6 +101,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<p><a href="addnew">Add Product</a></p>
 	</div>
 </div>
-
 </body>
 </html>

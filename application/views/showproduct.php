@@ -37,13 +37,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		margin: 0 15px 0 15px;
 	}
 
-	p.footer {
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
+	p {
+	font-size: 15px;
+	line-height: 45px;
+	padding: 0px 10px;
+	margin: 20px 0px 10px;
 	}
 
 	#container {

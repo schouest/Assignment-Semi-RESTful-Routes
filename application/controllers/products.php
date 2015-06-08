@@ -12,7 +12,6 @@ class products extends CI_Controller {
 		$this->load->model('product');
 		$product=$this->product->get_all_product();
 		$this->load->view('Index',array('product'=> $product));
-		//redirect("/");
 	}
 
 	public function new_product(){

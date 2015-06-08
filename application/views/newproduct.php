@@ -32,15 +32,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		margin: 0 15px 0 15px;
 	}
 
-	p.footer {
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
-
 	#container {
 		margin: 10px;
 		border: 1px solid #D0D0D0;
@@ -48,19 +39,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		padding: 15px;
 	}
 
-	textarea{
-		resize:none;
+	button{
+		font-size: 14pt;
+		margin-top: 15px;
+		width: 150px;
+		margin-bottom:20px;	
 	}
 	</style>
 </head>
 <body>
 	<div id="container">
 	<h1>Submit New Product</h1>
-
 	<div id="body">
 		<form method="post" action="products/create">
-			<label>Name<br>&nbsp<input type="text" name='name'></label><br>
-			<label>Description<br>&nbsp<input type="text" name='descr'></label><br>
+			<label>Name<br>&nbsp<input type="text" name='name' size="37"></label><br>
+			<label>Description<br>&nbsp<input type="text" size="65" name='descr'></label><br>
 			<label>Price<br>$<input type="number" name='price' step='any' min='0'></label><br>
 			<button type="submit" value="submit">Create</button>
 		</form>
