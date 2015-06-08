@@ -4,12 +4,12 @@ class product extends CI_Model {
      {
          return $this->db->query("SELECT * FROM products ORDER BY date_added DESC")->result_array();
      }
-     /*
-     function get_course_by_id($course_id)
+     
+     function get_product_by_id($id)
      {   
-         return $this->db->query("SELECT * FROM courses WHERE id = ?", array($course_id))->row_array();
+         return $this->db->query("SELECT * FROM products WHERE id = ?", array($id))->row_array();
      }
-
+/*
      function validate_course($id){
         $this->load->library('form_validation');
         $this->form_validation->set_rules('c_name', "Course Name", 'required|trim|alpha_numeric|min_length[15]');

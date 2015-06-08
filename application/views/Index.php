@@ -109,8 +109,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$entry['price'];
 			?></td><td style="background-color:grey">
 			<form action='' method="post">
-			<a href="<?= "localhost/courses/destroy/$id" ?>">Show</a>
-			<a href="<?= "localhost/courses/destroy/$id" ?>">Edit</a>
+			<a href="<?= "products/show_product/$id" ?>">Show</a>
+			<a href="<?= "products/destroy/$id" ?>">Edit</a>
 			<button>Remove</button>
 			</form>			
 </td></tr><?php }

@@ -67,11 +67,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 	<div id="container">
-	<h1>Product X</h1>
+	<h1>Product <?= $product['id']?></h1>
 	<div id="body">
-		<p>Name: sample</p>
-		<p>Description: sample</p>
-		<p>Price: sample</p>
+		<p>Name: <?= $product['name']?></p>
+		<p>Description: <?= $product['description']?></p>
+		<p>Price: <?= $product['price']?></p>
 	</div>
 	<a href ="#">Edit</a><span><a href="/">Back</a></span>
 </div>

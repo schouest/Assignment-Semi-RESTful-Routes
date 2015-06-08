@@ -23,16 +23,19 @@ class products extends CI_Controller {
 		$this->load->view('editproduct');
 	}
 
-	public function show_product(){
-		$this->load->view('showproduct');
+	public function show_product($id){
+		$this->load->model('product');
+		$product=$this->product->get_product_by_id($id);
+		//$this->load->view('Index',array('product'=> $product));
+		$this->load->view('showproduct',array('product'=> $product));
 	}
 
 	public function create(){
 
 	}
 
-	public function destory(){
-
+	public function destory($id){
+		redirect("/");
 	}
 
 	public function update(){
