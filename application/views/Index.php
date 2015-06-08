@@ -72,7 +72,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<div id="body">
 		<!-- <a href="products/new_product">TEST</a> -->
-		<a href="products/create">TEST</a>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Price</th>
+				<th>Actions</th>	
+			</tr>
+
+<!-- TODO:add foreach to populate table -->
+
+		</table>
+		<p><a href="addnew">Add Product</a></p>
 	</div>
 </div>
 

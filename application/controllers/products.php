@@ -10,6 +10,7 @@ class products extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('Index');
+		//redirect("/");
 	}
 
 	public function new_product(){
